@@ -14,12 +14,10 @@ TopSpin::TopSpin(int size, int spinSize)
     this->spinSize = spinSize;
     list = new CDLL(); //creating a new CDLL obj
     
-    for (int i =1; i<19; i++)
+    for (int i =1; i<=size; i++)
     {
         list->addData(i);
     }
-    list->addData(19);
-    list->addData(20);
     
     
 }
@@ -71,5 +69,36 @@ void TopSpin::display()
     }
     cout<<endl;
     cout<<"|-------------|"<<endl;
+}
+ostream& operator<<(ostream& os, const TopSpin& dt)
+{
+    os<<"|-------------|"<<endl;
+    for (int i=0; i<dt.size; i++)
+    {
+        os<<dt.list->getData(i);
+        os<<" ";
+        if (i == dt.spinSize-1) os<<"| ";
+    }
+    os<<endl;
+    os<<"|-------------|"<<endl;
+    
+    return os;
+}
+
+
+
+void TopSpin::random(unsigned int times)
+{
+    int randomLeftShifts = 1 + ( rand() % ( 19 - 1 + 1 ) ); //This will generate a random number in the range 1-19
+    for (int outer = 0 ; outer<times; outer++)
+    {
+        for (int i = 0; i<randomLeftShifts ; i++)//This will preform number of random left shifts
+        {
+            this->shiftLeft();
+        }
+        this->spin(); // This will perform a single spin * times
+    }
+    
+    
 }
 

@@ -5,20 +5,24 @@
 #include <iostream>
 using namespace std;
 
-class Node
-{
-public:
-    
-    int _data;
-    Node* _next;
-    Node* _previous;
-    Node();
-    ~Node();
-    
-};
+
 
 class CDLL
 {
+private:
+    
+    class Node
+    {
+    public:
+        
+        int _data;
+        Node* _next;
+        Node* _previous;
+        Node();
+        ~Node();
+        
+    };
+    
 public:
     
     Node* _head;

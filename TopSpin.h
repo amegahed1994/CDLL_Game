@@ -38,5 +38,6 @@ public:
     //order 1-20
     bool isSolved();
     void display(); //This function will display the game to the user
+    friend ostream& operator<<(ostream& os, const TopSpin& dt);  //Friend function that we will use to print to the screen
     
 };

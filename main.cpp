@@ -1,3 +1,18 @@
+/*
+
+ 
+ Your CDLL must be templated. You must use it to IMPLEMENT the TopSpin class. That is to say your
+ TopSpin class will probably have a member variable that is similar to the following
+ CDLL<int> board;
+ Since CDLL is a template, there will be no .cpp file, only a .h with the class declaration and
+ function implementation!
+ 
+ 
+ 
+ 
+ */
+
+
 #include "TopSpin.h"
 
 int main(){
@@ -5,7 +20,7 @@ int main(){
     int size;
     int spinSize;
     
-    /*
+    
     cout<<"Please enter the size: Size must be at least 1 (else it will be set to default value 20): "<<endl;
     cin>>size;
     if (size < 2 ) size = 20;
@@ -13,15 +28,19 @@ int main(){
     cin>>spinSize;
     if (spinSize > size) spinSize = 4; //This is the case that the assignment asked us to test for
     
+
     //Calling the TopSpin constructor
     TopSpin* myobj = new TopSpin(size,spinSize);
-    */
-    TopSpin* myobj = new TopSpin(5,2);
+    
+ 
     
     
-    /*
     int choice = 0;
-    myobj -> display();
+    unsigned int times =1; //user random input
+    cout<<"Enter number of random loops that initializes your game: ";
+    cin>>times;
+    myobj -> random(times);
+    cout<<*myobj;
     while (choice != 4)
     {
         cout << "Please choose from the following options enter your choice by entering the corresponding number:" << endl;
@@ -32,15 +51,18 @@ int main(){
         {
             case 1 :
                 myobj->shiftRight();
-                myobj->display();
+                cout<<*myobj;
+                //myobj->display();
                 break;
             case 2 :
                 myobj->shiftLeft();
-                myobj->display();
+                cout<<*myobj;
+                //myobj->display();
                 break;
             case 3 :
                 myobj->spin();
-                myobj->display();
+                cout<<*myobj;
+                //myobj->display();
                 break;
             case 4 :
                 choice = 4;
@@ -59,6 +81,6 @@ int main(){
     cout<<"The End: See you Later"<<endl;
     
     delete myobj;
-    */
+    
     return 0;
 }

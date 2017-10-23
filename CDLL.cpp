@@ -70,7 +70,7 @@ void CDLL::swap(unsigned int src,unsigned int dst)
 }
 
 
-Node* CDLL::nodeTraversal (int n) //note node 0 is the first node
+CDLL::Node* CDLL::nodeTraversal (int n) //note node 0 is the first node
 {
     //This function will traverse to the ith node
     
@@ -145,13 +145,13 @@ CDLL::~CDLL()
 //---------------------------------------------------------------------------------------------------------------------------//
 
 
-Node::Node()
+CDLL::Node::Node()
 {
     //cout<<"Node constructor reached"<<endl;
     _next = NULL;
     _previous = NULL;
 }
-Node::~Node()
+CDLL::Node::~Node()
 {
     //cout<<"Node Deconstructor reached"<<endl;
 }
