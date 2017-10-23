@@ -28,12 +28,12 @@ TopSpin::~TopSpin()
 
 void TopSpin::shiftLeft()
 {
-    list->decrementHead();
+    list->incrementHead();
 }
 //shifts the pieces 1 to the right
 void TopSpin::shiftRight()
 {
-    list->incrementHead();
+    list->decrementHead();
 }
 //reverses the pieces in the spin mechanism, IE if the 4 in the mechanism are
 // 1,4,3,6 we will have 6,3,4,1

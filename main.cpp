@@ -1,18 +1,3 @@
-/*
-
- 
- Your CDLL must be templated. You must use it to IMPLEMENT the TopSpin class. That is to say your
- TopSpin class will probably have a member variable that is similar to the following
- CDLL<int> board;
- Since CDLL is a template, there will be no .cpp file, only a .h with the class declaration and
- function implementation!
- 
- 
- 
- 
- */
-
-
 #include "TopSpin.h"
 
 int main(){

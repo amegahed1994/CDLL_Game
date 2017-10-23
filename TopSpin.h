@@ -2,7 +2,7 @@
 //  TopSpin.h
 
 #pragma once
-#include "CDLL.h"
+#include "CDLL.cpp"
 
 class TopSpinADT {
 public:
